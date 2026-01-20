@@ -9,7 +9,7 @@ class MainLayout {
   val view = new BorderPane()
 
   // --- NAVBAR ---
-  val navbar = new HBox(10) {
+  private val navbar = new HBox(10) {
     padding = Insets(10)
     style = "-fx-background-color: #2c3e50;"
     children = Seq(
@@ -19,15 +19,15 @@ class MainLayout {
   }
 
   // --- CONTENT ---
-  val content = new VBox(15) {
+  private val content = new VBox(15) {
     padding = Insets(20)
 
-    val algoCombo = new ComboBox(AlgorithmRegistry.getNames) {
+    val algoCombo: ComboBox[String] = new ComboBox(AlgorithmRegistry.getNames) {
       value = AlgorithmRegistry.getNames.headOption.getOrElse("")
       maxWidth = Double.MaxValue
     }
 
-    val customSizeField = new TextField { promptText = "Rozmiar (np. 50000)" }
+    val customSizeField: TextField = new TextField { promptText = "Rozmiar (np. 50000)" }
 
     children = Seq(
       new Label("1. Wybierz Algorytm:"),

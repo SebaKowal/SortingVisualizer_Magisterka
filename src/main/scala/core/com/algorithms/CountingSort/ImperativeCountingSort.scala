@@ -23,7 +23,7 @@ class ImperativeCountingSort extends Sorter {
     val output = new Array[Int](arr.length)
 
     // 2. Zliczanie wystąpień
-    for (i <- 0 until arr.length) {
+    for (i <- arr.indices) {
       count(arr(i) - min) += 1
     }
 
