@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <option name="separateProdTestSources" value="true" />
+    <profile name="sbt 1" modules="SortingVisualizer,SortingVisualizer.main,SortingVisualizer.test,algorithms,algorithms.main,algorithms.test,main,main.main,main.test,sortingvisualizer_magisterka,sortingvisualizer_magisterka.main,sortingvisualizer_magisterka.test" />
+  </component>
+</project>
